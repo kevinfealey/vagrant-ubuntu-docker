@@ -13,6 +13,8 @@ if [ "$installDocker" = "true" ]; then
 	apt-get -y install curl
 	curl -fsSL https://get.docker.com/ | sh
 	usermod -aG docker vagrant
+	apt-get -y install python-pip
+	pip install docker-compose
 fi
 
 ### These options do not currently work. The commands below can be run manually to set up the environments, but they do not work if Vagrant runs them. I suspect these may need to be run as daemons, but I'm not sure.
